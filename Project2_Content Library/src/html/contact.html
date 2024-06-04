@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactUs Page</title>
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="icon" href="../../public/assests/icons/online-library.png"></head>
+<body>
+    <header class="headerContainer" id="headerContainer"></header>
+
+    <div class="loginOuterContainer">
+        <hr>
+        <div class="loginContainer" id="loginContainer">
+            
+            <p class="headingAuthenticate">Contact Form</p>
+            <input type="text" autofocus placeholder="FIRST NAME" class="loginInputBOx" id="firstName"><br><br>
+            <input type="text" placeholder="LAST NAME" class="loginInputBOx" id="secondName"><br><br>
+            <input type="email" placeholder="EMAIL" class="loginInputBOx" id="email"><br><br>
+            <input type="text" placeholder="PHONE NUMBER" required maxlength="15" class="loginInputBOx" id="contactNumber"><br><br>
+            <input type="text" placeholder="ENTER USERNAME" class="loginInputBOx" id="username"><br><br>
+            <textarea class="textArea " cols="33" rows="3" placeholder="ISSUE"></textarea>
+            <!-- <input type="text" placeholder="ISSUE" class="textArea" id="issueContact"> -->
+            <p id="errorIssues"></p>
+            <input type="submit" value="Submit" class="loginBtn" id="signupSubmit"><br><br>
+
+        </div>
+    </div>
+
+    
+    <script src="../js/contact.js"></script>
+    <!-- For navbar -->
+    <script src="../js/navbar.js"></script>  
+</body>
+</html>

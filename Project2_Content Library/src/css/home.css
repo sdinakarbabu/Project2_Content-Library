@@ -1,0 +1,345 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+/* body::-webkit-scrollbar{
+    display: none;
+} */
+
+ /* ------------------------ Search Box Css ------------------------------------ */
+
+.searchBoxOuter {
+    display: flex;
+    justify-content: center;   
+    
+}
+.searchBox {
+    /* background-color: red; */
+    box-shadow: 0.5px 0.4px 6px black;
+    width: 40%;
+    height: 4vh;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+}
+.searchBox #searchInput {
+    margin: 0;
+    width: 95%;
+    height: 100%;
+    font-size: 12px;
+    outline: none;
+    border: none;
+    padding-left: 5px;
+    background-color: transparent;
+}
+.searchBox #searchInput::placeholder{
+    /* padding-top: -15px; */
+    font-size: 15px;
+    padding-left: 5px;
+    text-shadow: 0.2px 0.3px 0px black;
+}
+.searchBox .searchIcon {
+    height: 40%;
+    padding: 8px;
+    filter: drop-shadow(1px 0.3px 0px #000);
+}
+ /* ------------------------ Category Css ------------------------------------ */
+.categorySection {
+    width: 100%;
+    overflow: auto;
+    /* position: relative;
+    top: 7vh; */
+    display:flex;
+    align-items: center;
+    gap: 15px;
+}
+.categorySection .categoryEachContainer {
+    box-shadow: 0px 1.5px 3px black;
+    scroll-behavior: smooth;
+    /* background-image: linear-gradient(to right,#fff,violet); */
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+    margin: 15px 1px 15px 5px;
+
+}
+.categorySection::-webkit-scrollbar{
+    display: none;
+}
+.categoryEachContainer .categoryName {
+    font-size: 12px;
+    width: 100%;
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* ------------------------ Products Css -----------------------------------*/
+.productsSection {
+    width: 100%;
+    /* position: relative;
+    top: 7vh; */
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+.topRated {
+    font-size: 20px;
+    text-decoration: underline;
+    margin-left: 5px;
+    font-weight: 500;
+}
+.productsSection .productEachContainer {
+    /* position: relative;
+    top: 50px; */
+    /* background-color: red; */
+    box-shadow: 1px 0.5px 7px black;
+    height: 180px;
+    width: 150px;
+    margin: 15px;
+}
+.productEachContainer .bookImage {
+    /* min-height: 90px; */
+    /* max-height: 150px; */
+    height: 65%;
+    width: 100%;
+}
+.productEachContainer .productBlock {
+    text-align: center;
+}
+.productBlock .bookName {
+    font-weight: 400;
+    font-size: 15px;
+}
+.productBlock .readMoreBtn {
+    background-color: rgb(55, 158, 199);
+    padding: 5px 8px;
+    border-radius: 15px;
+    border: 0px;
+    font-size: 8px;
+    font-weight: normal;
+    margin: 10px;
+    color: #fff;
+}
+.pulse{
+    animation: pulse-animation 2s 1;
+
+}
+.productBlock .readMoreBtn:focus{
+    animation: pulse-animation 2s 1;
+
+}
+
+
+
+
+@keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+}
+
+
+
+
+@media screen and (min-width:1441px) {
+    .searchBox {
+        box-shadow: 1px 0.8px 6px black,1px 0.9px 4px black;
+    }
+    .categorySection .categoryEachContainer{
+        height: 90px;
+        width: 90px;
+    }
+    .categoryEachContainer .categoryName {
+        font-size: 23px;
+    }
+    .topRated {
+        font-size: 25px;
+        text-decoration: underline;
+        margin-left: 5px;
+    }
+    .productsSection .productEachContainer {
+        width:200px;
+        height:250px;
+
+    }
+    .productBlock .bookName {
+        font-size: 20px;
+    }
+    .productBlock .readMoreBtn {
+        font-size: 15px;
+        margin: 15px;
+    }
+}
+@media screen and (min-width:1080px) and (max-width:1440px) {
+    .searchBox {
+        width: 40%;
+    }
+    .searchBox #searchInput {
+        font-size: 20px;
+    }
+    .searchBox .searchIcon {
+        height: 35%;
+    }
+    .categorySection .categoryEachContainer{
+        height: 80px;
+        width: 80px;
+    }
+    .categoryEachContainer .categoryName {
+        font-size: 20px;
+    }
+    .topRated {
+        font-size: 20px;
+        text-decoration: underline;
+        margin-left: 5px;
+    }
+    .productsSection .productEachContainer {
+        width:160px;
+        height:200px;
+
+    }
+    .productBlock .bookName {
+        font-size: 18px;
+    }
+    .productBlock .readMoreBtn {
+        font-size: 8px;
+        padding: 3px 5px;
+        margin: 10px;
+    }
+}
+@media screen and (min-width:761px) and (max-width:1080px){
+    .searchBox {
+        width: 50%;
+    }
+    .searchBox #searchInput {
+        font-size: 15px;
+    }
+    .searchBox .searchIcon {
+        height: 30%;
+    }
+    .categorySection .categoryEachContainer{
+        height: 70px;
+        width: 70px;
+    }
+    .categoryEachContainer .categoryName {
+        font-size: 18px;
+    }
+    .topRated {
+        font-size: 18px;
+        text-decoration: underline;
+        margin-left: 5px;
+    }
+    .productsSection{
+        justify-content: center;
+    }
+    .productsSection .productEachContainer {
+        width:120px;
+        height:160px;
+
+    }
+    .productBlock .bookName {
+        font-size: 15px;
+        
+    }
+    .productBlock .readMoreBtn {
+        font-size: 8px;
+        margin: 10px;
+    }
+}
+@media screen and (max-width:760px) {
+    .searchBox {
+        height: 4vh;
+    }
+    .searchBox #searchInput {
+        font-size: 12px;
+    }
+    .searchBox .searchIcon {
+        height: 30%;
+    }
+    .categorySection .categoryEachContainer{
+        height: 70px;
+        width: 70px;
+    }
+    .categoryEachContainer .categoryName {
+        font-size: 17px;
+        width: 100%;
+    }
+    .topRated {
+        font-size: 18px;
+        text-decoration: underline;
+        margin-left: 5px;
+    }
+    .productsSection{
+        justify-content: center;
+    }
+    .productsSection .productEachContainer {
+        width:120px;
+        height:160px;
+
+    }
+    .productBlock .bookName {
+        font-size: 13px;
+    }
+    .productBlock .readMoreBtn {
+        font-size: 7px;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .searchBox {
+        width: 60%;
+        height: 4vh;
+    }
+    .searchBox #searchInput {
+        margin: 0;
+        width: 95%;
+        height: 100%;
+        font-size: 13px; 
+        outline: none;
+        border: none;
+        padding-left: 5px;
+        background-color: transparent;
+    }
+    .searchBox .searchIcon {
+        height: 30%;
+        padding: 8px;
+        filter: drop-shadow(1px 0.3px 0px #000);
+    }
+    .categorySection .categoryEachContainer{
+        height: 50px;
+        width: 50px;
+    }
+    .categoryEachContainer .categoryName {
+        font-size: 13px;
+        width: 100%;
+    }
+    .productsSection{
+        justify-content: center;
+    }
+    .topRated {
+        font-size: 15px;
+        text-decoration: underline;
+        margin-left: 5px;
+    }
+    .productsSection .productEachContainer {
+        width:80px;
+        height:120px;
+
+    }
+    .productBlock .bookName {
+        font-size: 10px;
+    }
+    .productBlock .readMoreBtn {
+        padding: 3px 5px;
+        font-size: 4px;
+    }
+} 
+/*------------------------ Scroll Bar Css ------------------------------------*/
+
+/*------------------------ Fotter Css ----------------------------------- */

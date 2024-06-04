@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+.headerContainer {
+    position: sticky; 
+    top: 0; 
+    /* min-height: 3vh; */
+    /* max-height: 7vh; */
+    align-content: center;
+    height:7vh;
+    width: 100%;
+    /* margin: 5px; */
+    /* background-color: #C7B7A3; */
+    background-image: linear-gradient(to right,#fff, #F1F1F1);
+    box-shadow: 1px 1.5px 8px violet;
+    z-index: 5;
+}
+.headerContainer .navBarContainer {
+    display: flex;
+    justify-content:space-around;
+    align-items: center; 
+     padding: auto;
+    /* background-color: red; */
+}
+.navBarContainer .logoBlock {
+    display: inline-flex;
+    gap: 15px;
+    align-items: center;
+    /* margin: auto;
+    padding: auto; */
+    /* background-color: red; */
+}
+.logoBlock .logoImage {
+    min-height: 20px;
+    max-height: 30px;
+    filter: drop-shadow(2px 1px 1.2px #000);
+    
+
+}
+.logoBlock .logoHeading {
+    color: #C7B7A3;
+    font-size: 18px;
+    text-shadow: 1.8px 2.5px 2.4px #000,1.5px 1px 2.5px #000;
+    filter: contrast(5);
+}
+
+.navBarContainer .linksBlock {
+    display: inline-flex;
+    gap: 15px;
+    /* margin: auto;
+    padding: auto; */
+}
+.linksBlock .eachLink {
+    list-style-type: none;
+    font-size: 15px;
+
+}
+.eachLink a{
+    text-decoration: none;
+    text-transform: uppercase;
+    /* color: violet; */
+    color: #C7B7A3;
+    filter: contrast(1.8);
+    text-shadow: 2px 1px 1px #000;
+    transition: 0.6s ease;
+
+}
+
+.eachLink:hover {
+    font-size: 18px;
+}
+
+
+
+@media screen and (min-width:1441px) {
+    .navBarContainer .logoBlock {
+        gap: 25px;
+    }
+    .logoBlock .logoImage {
+       min-height: 45px;
+       max-height: 75px;
+    }
+    .logoBlock .logoHeading {
+      font-size: 60px;
+    }
+    .navBarContainer .linksBlock {
+        gap: 65px;
+    }
+    .linksBlock .eachLink {
+        font-size: 50px;
+    
+    }
+    .eachLink:hover {
+        font-size: 53px;
+    }
+}
+@media screen and (min-width:800px) and (max-width:1440px) {
+    .navBarContainer .logoBlock {
+        gap: 25px;
+    }
+    .logoBlock .logoImage {
+       min-height: 20px;
+       max-height: 35px;
+    }
+    .logoBlock .logoHeading {
+      font-size: 35px;
+    }
+    .navBarContainer .linksBlock {
+        gap: 30px;
+    }
+    .linksBlock .eachLink {
+        font-size: 33px;
+    
+    }
+    .eachLink:hover {
+        font-size: 36px;
+    }
+}
+@media screen and (min-width:761px) {
+    .navBarContainer .logoBlock {
+        gap: 8px;
+    }
+    .logoBlock .logoImage {
+       min-height: 15px;
+       max-height: 25px;
+    }
+    .logoBlock .logoHeading {
+      font-size: 20px;
+    }
+    .navBarContainer .linksBlock {
+        gap: 15px;
+    }
+    .linksBlock .eachLink {
+        font-size: 18px;
+    
+    }
+    .eachLink:hover {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .headerContainer {
+        height: 12vh;
+        /* text-align: center; */
+    }
+    .headerContainer .navBarContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .navBarContainer .logoBlock {
+        gap: 5px;
+    }
+    .logoBlock .logoImage {
+       min-height: 12px;
+       max-height: 16px;
+    }
+    .logoBlock .logoHeading {
+      font-size: 15px;
+    }
+    .navBarContainer .linksBlock {
+        gap: 35px;
+    }
+    .linksBlock .eachLink {
+        font-size: 12px;
+    
+    }
+    .eachLink:hover {
+        font-size: 15px;
+    }
+}
